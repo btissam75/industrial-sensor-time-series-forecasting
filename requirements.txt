@@ -1,0 +1,12 @@
+ipython
+jupyter
+keras
+matplotlib
+numpy
+pandas
+prophet
+scikit-learn
+seaborn
+statsmodels
+tqdm
+
