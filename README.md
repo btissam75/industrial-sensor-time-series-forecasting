@@ -68,9 +68,15 @@ Percentage errors are very high because several target values are close to zero.
 
 ```text
 .
-├── sarimax.ipynb          # Complete analysis and modelling workflow
-├── RAPPORT_sarimax.pdf    # Detailed academic report
-└── README.md              # Project overview
+├── data/
+│   └── README.md                              # Dataset access and citation
+├── notebooks/
+│   └── sarimax-industrial-forecasting.ipynb  # Analysis and modelling workflow
+├── reports/
+│   └── sarimax-project-report.pdf             # Detailed academic report
+├── .gitignore
+├── README.md                                  # Project overview
+└── requirements.txt                           # Python dependencies
 ```
 
 ## Run the notebook
@@ -78,7 +84,7 @@ Percentage errors are very high because several target values are close to zero.
 The notebook was developed in Google Colab and currently loads the dataset through its upload interface.
 
 1. Download the UR3 CobotOps dataset from UCI.
-2. Open `sarimax.ipynb` in Google Colab or Jupyter Notebook.
+2. Open `notebooks/sarimax-industrial-forecasting.ipynb` in Google Colab or Jupyter Notebook.
 3. Install the required libraries.
 4. Run the notebook and upload the dataset when prompted.
 
