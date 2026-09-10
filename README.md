@@ -1,6 +1,19 @@
-# Industrial Sensor Forecasting with SARIMAX
+# Industrial Sensor Time-Series Forecasting
 
 Time-series forecasting of industrial sensor measurements from a UR3 collaborative robot. This project evaluates whether statistical forecasting can capture the short-term dynamics of robot currents, temperatures, and joint speeds, with a focus on `Tool_current`.
+
+## Project at a glance
+
+| Item | Details |
+| --- | --- |
+| Business context | Industrial monitoring and predictive-maintenance research |
+| Forecast target | UR3 robot tool current (`Tool_current`) |
+| Main model | Seasonal ARIMA with exogenous variables (SARIMAX) |
+| Supporting models | ARIMA, Prophet, and LSTM |
+| Validation | Chronological holdout and five-fold time-series cross-validation |
+| Best reported errors | RMSE: **0.1264** · MAE: **0.1021** |
+
+**Workflow:** sensor data → cleaning and hourly aggregation → stationarity and seasonality analysis → model training → temporal validation → forecast interpretation.
 
 ## Project overview
 
@@ -34,6 +47,18 @@ The source dataset is licensed under CC BY 4.0 and is not duplicated in this rep
 7. Validate stability with five chronological cross-validation folds.
 8. Add temperature and speed signals as exogenous regressors.
 
+## Exploratory analysis
+
+The hourly decomposition separates the observed tool-current signal into trend, daily seasonal structure, and residual variation.
+
+![Hourly seasonal decomposition of tool current](assets/seasonal-decomposition.png)
+
+ACF and PACF diagnostics were used to guide the autoregressive and moving-average orders.
+
+| Autocorrelation | Partial autocorrelation |
+| --- | --- |
+| ![ACF analysis](assets/acf-analysis.png) | ![PACF analysis](assets/pacf-analysis.png) |
+
 ## Results
 
 The final exogenous SARIMAX experiment reported:
@@ -48,6 +73,12 @@ The final exogenous SARIMAX experiment reported:
 The five temporal cross-validation folds produced RMSE values between `0.0761` and `0.1477`.
 
 Percentage errors are very high because several target values are close to zero. In this setting, RMSE and MAE are more informative than MAPE. The results should be treated as an exploratory proof of concept rather than production-ready predictive-maintenance performance.
+
+### Forecast with exogenous variables
+
+The chart below compares the chronological training series, test observations, and SARIMAX predictions using temperature and speed as additional signals.
+
+![SARIMAX forecast with exogenous variables](assets/sarimax-exogenous-forecast.png)
 
 ## Key findings
 
