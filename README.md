@@ -125,12 +125,6 @@ Main dependencies include `pandas`, `numpy`, `matplotlib`, `seaborn`, `statsmode
 
 Python · pandas · Statistical modelling · Time-series analysis · SARIMAX · Feature engineering · Temporal cross-validation · Forecast evaluation · Data visualization
 
-## Authors
-
-- Btissam Arehal
-- Aya Belhadji
-- Wijdane Hrour
-
 Academic project completed for the Master's program in Data Science at École Normale Supérieure de Tétouan, Abdelmalek Essaâdi University (2025-2026).
 
 ## Contact
