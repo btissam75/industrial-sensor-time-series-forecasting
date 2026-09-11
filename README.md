@@ -17,9 +17,9 @@ Time-series forecasting of industrial sensor measurements from a UR3 collaborati
 
 ## Forecast monitoring dashboard
 
-The interface concept below translates the notebook results into an operational monitoring view, combining the observed signal, SARIMAX forecast, evaluation metrics, model configuration, and validation context.
+The forecasting interface brings the notebook workflow into an operational monitoring view, combining the observed signal, SARIMAX forecast, chronological validation, execution events, and processing pipeline.
 
-![Industrial sensor forecasting dashboard](assets/forecast-monitoring-dashboard.png)
+![Industrial sensor forecasting dashboard](assets/forecast-operations-interface.png)
 
 ## Project overview
 
