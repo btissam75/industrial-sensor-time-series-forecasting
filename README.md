@@ -15,6 +15,12 @@ Time-series forecasting of industrial sensor measurements from a UR3 collaborati
 
 **Workflow:** sensor data → cleaning and hourly aggregation → stationarity and seasonality analysis → model training → temporal validation → forecast interpretation.
 
+## Forecast monitoring dashboard
+
+The interface concept below translates the notebook results into an operational monitoring view, combining the observed signal, SARIMAX forecast, evaluation metrics, model configuration, and validation context.
+
+![Industrial sensor forecasting dashboard](assets/forecast-monitoring-dashboard.png)
+
 ## Project overview
 
 Industrial robots continuously generate sensor data that can support condition monitoring, operational planning, and predictive maintenance. This project develops and evaluates a SARIMAX forecasting workflow using the multivariate [UR3 CobotOps dataset](https://archive.ics.uci.edu/dataset/963/ur3%2Bcobotops) from the UCI Machine Learning Repository.
